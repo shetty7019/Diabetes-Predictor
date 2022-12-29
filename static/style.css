@@ -1,0 +1,57 @@
+/* Apply this style to the body element */
+body {
+    /* Set the background color to white */
+    background-color: white;
+    
+    /* Set the font to a sans-serif font */
+    font-family: sans-serif;
+  }
+  
+  /* Apply this style to the form element */
+  form {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 500px;
+    
+    /* Add some padding to the form */
+    padding: 20px;
+    
+    /* Give the form a border */
+    border: 1px solid #ccc;
+  }
+  
+  /* Apply this style to the input elements within the form */
+  form input {
+    /* Add some padding and a border to the input elements */
+    padding: 12px;
+    border: 1px solid #ccc;
+    
+    /* Give the input elements a width of 100% */
+    width: 100%;
+    
+    /* Add some margin to the input elements */
+    margin-bottom: 20px;
+  }
+  
+  /* Apply this style to the submit button */
+  form input[type="submit"] {
+    /* Add some padding and a background color to the submit button */
+    padding: 12px 20px;
+    background-color: #4caf50;
+    
+    /* Change the text color to white */
+    color: white;
+    
+    /* Add some hover effects to the submit button */
+    cursor: pointer;
+  }
+  
+  /* Apply this style to the label elements within the form */
+  form label {
+    /* Change the font size and weight of the labels */
+    font-size: 16px;
+    font-weight: bold;
+    
+    /* Add some margin to the labels */
+    margin-bottom: 8px;
+  }

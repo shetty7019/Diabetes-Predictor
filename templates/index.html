@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diabetes Predictor</title>
+  </head>
+  <body>
+    <h1>Diabetes Predictor</h1>
+    <form method="post" action="/predict">
+      <label>Pregnancies</label>
+      <input type="text" name="pregnancies" />
+
+      <br />
+      <br />
+
+      <label>Glucose</label>
+      <input type="text" name="glucose" />
+
+      <br />
+      <br />
+      
+      <label>Blood Pressure</label>
+      <input type="text" name="bloodpressure" />
+      
+      <br />
+      <br />
+      
+      <label>Skin Thickness</label>
+      <input type="text" name="skinthickness" />
+      
+      <br />
+      <br />
+      
+      <label>Insulin</label>
+      <input type="text" name="insulin" />
+      
+      <br />
+      <br />
+      
+      <label>BMI</label>
+      <input type="text" name="bmi" />
+      
+      <br />
+      <br />
+      
+      <label>Diabetes Pedigree Function</label>
+      <input type="text" name="diabetespedigreefunction" />
+      
+      <br />
+      <br />
+      
+      <label>Age</label>
+      <input type="text" name="age" />
+      <br />
+      <br />
+      <input type="submit" value="Predict">
+
+      
+
+    </form>
+  </body>
+</html>
