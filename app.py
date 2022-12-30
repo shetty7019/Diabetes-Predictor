@@ -15,18 +15,18 @@ def index():
 @app.route('/predict', methods=['POST'])
 
 def predict_diabetes():
-    pregnancies = request.form.get('Pregnancies')
+    # pregnancies = request.form.get('Pregnancies')
     glucose = request.form.get('Glucose')
-    bloodpressure = request.form.get('BloodPressure')
-    skinthickness = request.form.get('SkinThickness')
+    # bloodpressure = request.form.get('BloodPressure')
+    # skinthickness = request.form.get('SkinThickness')
     insulin = request.form.get('Insulin')
     bmi = request.form.get('BMI')
-    diabetespedigreefunction = request.form.get('DiabetesPedigreeFunction')
+    # diabetespedigreefunction = request.form.get('DiabetesPedigreeFunction')
     age = request.form.get('Age')
 
     #prediction
 
-    result=model.predict(np.array([pregnancies,glucose,bloodpressure,skinthickness,insulin,bmi,diabetespedigreefunction,age]).reshape(1,8))
+    result=model.predict(np.array([glucose,insulin,bmi,age]).reshape(1,4))
 
     if result[0]==1:
      result='Diabetic'
