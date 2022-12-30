@@ -1,40 +1,36 @@
-<html lang="en">
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diabetes Predictor</title>
-    <style>
-      h1{
-        font-weight: bold;
-        color: #4caf50;
-      }
-    </style>
-</head><h1 align="center">Diabetes Predication</h1>
+  <meta charset="UTF-8">
+  <title>Diabetes Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  
+</head>
+
 <body>
- <form method="post" action="/predict">
-   <!-- <label>Pregnancies:</label>
-   <input type="text" name="Pregnancies"><br><br> -->
-   <label>Glucose:</label>
-   <input type="text" name="Glucose"><br><br>
-   <!-- <label>BloodPressure:</label>
-   <input type="text" name="BloodPressure"><br><br> -->
-   <!-- <label>SkinThickness:</label>
-   <input type="text" name="SkinThickness"><br><br> -->
-   <label>Insulin:</label>
-   <input type="text" name="Insulin"><br><br>
-   <label>BMI:</label>
-   <input type="text" name="BMI"><br><br>
-   <!-- <label>DiabetesPedigreeFunction:</label> glucose bmiinsulin age
-   <input type="text" name="DiabetesPedigreeFunction"><br><br> -->
-   <label>Age:</label>
-   <input type="text" name="Age"><br><br>
-   <input type="submit" value="predict">
-   {% if result %}
-    <p>Person is: 
-      {{result}}</p>
-   {% endif %}
- </form>     
+  <h1 align="center">Diabetes Predictor</h1>
+ 
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="Glucose Level" placeholder="Glucose Level" required="required" />
+    	<input type="text" name="Insulin" placeholder="Insulin" required="required" />
+        <input type="text" name="BMI" placeholder="BMI" required="required" />
+        <input type="text" name="Age" placeholder="Age" required="required" />
+		
+
+        <button type="submit" align="center" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br><h3 align="center">
+   {{ prediction_text }}</h3>
+
+ 
+
+
 </body>
 </html>
